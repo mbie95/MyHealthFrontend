@@ -6,6 +6,7 @@ import { Login } from './login/login';
 import { Profile } from './profile/profile';
 import { UpdateProfile } from './update-profile/update-profile';
 import { UpdatePassword } from './update-password/update-password';
+import { BookConsultation } from './book-consultation/book-consultation';
 import { authGuard, doctorOnlyGuard, patientOnlyGuard } from './service/guard';
 
 export const routes: Routes = [
@@ -21,6 +22,7 @@ export const routes: Routes = [
     { path: 'profile', component: Profile, canActivate: [patientOnlyGuard] },
     { path: 'update-profile', component: UpdateProfile, canActivate: [patientOnlyGuard] },
     { path: 'update-password', component: UpdatePassword, canActivate: [authGuard] },
+    { path: 'book-appointment', component: BookConsultation, canActivate: [patientOnlyGuard] },
 
     { path: '**', component: Home }
     
