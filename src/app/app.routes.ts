@@ -10,6 +10,7 @@ import { BookConsultation } from './book-consultation/book-consultation';
 import { MyAppointments } from './my-appointments/my-appointments';
 import { ConsultationHistory } from './consultation-history/consultation-history';
 import { ForgotPassword } from './forgot-password/forgot-password';
+import { ResetPassword } from './reset-password/reset-password';
 import { authGuard, doctorOnlyGuard, patientOnlyGuard } from './service/guard';
 
 export const routes: Routes = [
@@ -21,6 +22,7 @@ export const routes: Routes = [
     { path: 'register-doctor', component: DoctorReg },
     { path: 'login', component: Login },
     { path: 'forgot-password', component: ForgotPassword },
+    { path: 'reset-password', component: ResetPassword },
 
     /* Protected Routes */
     { path: 'profile', component: Profile, canActivate: [patientOnlyGuard] },
