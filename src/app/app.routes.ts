@@ -12,6 +12,7 @@ import { ConsultationHistory } from './consultation-history/consultation-history
 import { ForgotPassword } from './forgot-password/forgot-password';
 import { ResetPassword } from './reset-password/reset-password';
 import { DoctorProfile } from './doctor/doctor-profile/doctor-profile';
+import { UpdatedoctorProfile } from './doctor/updatedoctor-profile/updatedoctor-profile';
 import { authGuard, doctorOnlyGuard, patientOnlyGuard } from './service/guard';
 
 export const routes: Routes = [
@@ -35,6 +36,7 @@ export const routes: Routes = [
 
     /* Doctors Routes */
     { path: 'doctor/profile', component: DoctorProfile, canActivate: [doctorOnlyGuard] },
+    { path: 'doctor/update-profile', component: UpdatedoctorProfile, canActivate: [doctorOnlyGuard] },
     
     { path: '**', component: Home }
     
