@@ -15,6 +15,7 @@ import { DoctorProfile } from './doctor/doctor-profile/doctor-profile';
 import { UpdatedoctorProfile } from './doctor/updatedoctor-profile/updatedoctor-profile';
 import { DoctorAppointments } from './doctor/doctor-appointments/doctor-appointments';
 import { CreateConsultation } from './doctor/create-consultation/create-consultation';
+import { PatientConsultationHistory } from './doctor/patient-consultation-history/patient-consultation-history';
 import { authGuard, doctorOnlyGuard, patientOnlyGuard } from './service/guard';
 
 export const routes: Routes = [
@@ -41,6 +42,7 @@ export const routes: Routes = [
     { path: 'doctor/update-profile', component: UpdatedoctorProfile, canActivate: [doctorOnlyGuard] },
     { path: 'doctor/appointments', component: DoctorAppointments, canActivate: [doctorOnlyGuard] },
     { path: 'doctor/create-consultation', component: CreateConsultation, canActivate: [doctorOnlyGuard] },
+    { path: 'doctor/patient-consultation-history', component: PatientConsultationHistory, canActivate: [doctorOnlyGuard] },
     
     { path: '**', component: Home }
     
