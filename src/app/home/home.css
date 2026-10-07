@@ -50,6 +50,7 @@
 .cta-btn.primary:hover {
     background: transparent;
     color: white;
+    cursor: pointer;
 }
 
 .cta-btn.secondary {
@@ -59,6 +60,7 @@
 .cta-btn.secondary:hover {
     background: white;
     color: #667eea;
+    cursor: pointer;
 }
 
 /* Utility Classes */
