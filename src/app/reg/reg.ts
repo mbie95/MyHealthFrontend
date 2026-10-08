@@ -62,6 +62,8 @@ export class Reg {
     })
   }
 
-  
+  onGoogleLogin =(): void => {
+    window.location.href = 'http://localhost:8086/api/auth/login/google';
+  }
 
 }
